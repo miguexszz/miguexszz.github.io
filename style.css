@@ -1,8 +1,11 @@
 /* style.css */
 
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 body {
-    background-color: #ffffff; /* Cor de fundo escura */
-    color: #121212;            /* Texto branco */
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Gradiente de fundo escuro */
+    color: #fff; /* Texto branco */
     font-family: 'Roboto', sans-serif; /* Fonte moderna */
     margin: 0;
     padding: 0;
@@ -10,62 +13,94 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0; /* Adiciona espaçamento ao redor do cabeçalho */
+    text-align: center;
+    padding: 20px 0;
 }
 
 header img {
-    width: 500px; /* Largura da imagem do cabeçalho */
+    width: 200px; /* Tamanho da imagem */
     height: auto;
+    border-radius: 50%; /* Imagem redonda */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Sombra neon */
 }
 
 h1 {
     text-align: center;
     font-size: 3rem;
     margin-top: 20px;
-    color: #3de7f2; /* Cor verde neon */
+    color: #00ffcc; /* Verde neon */
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 section {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
     background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(61, 231, 242);; /* Sombra neon verde */
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 900px;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+section:hover {
+    transform: translateY(-10px); /* Elevação suave ao passar o mouse */
 }
 
 h2 {
-    color: #3de7f2; /* Cor verde neon */
-    text-shadow: 0 0 5px #3de7f2; /* Sombra de texto neon */
-}
-
-footer {
+    color: #00ffcc; /* Verde neon */
     text-align: center;
-    padding: 1px 0;
-    background-color: #3de7f2;
-    color: #000;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 40px;
+    font-size: 2rem;
+    text-shadow: 0 0 5px #00ffcc; /* Sombra de texto neon */
 }
 
 ul {
-    list-style-type: square;
+    list-style-type: disc; /* Marcadores de lista padrão */
+    padding-left: 20px;
 }
 
 ul li {
     margin: 10px 0;
 }
 
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to right, #004d40, #00796b); /* Gradiente de fundo */
+    color: #fff; /* Texto branco no rodapé */
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer li {
+    margin: 5px 0;
+}
+
+footer span {
+    display: block;
+    margin-top: 10px;
+}
+
 a {
-    color: #3de7f2; /* Links em verde neon */
+    color: #00ffcc; /* Links em verde neon */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transição suave */
 }
 
 a:hover {
-    color: #ffffff; /* Links mudam para branco ao passar o mouse */
+    color: #00ffff; /* Links mudam para azul neon ao passar o mouse */
 }
 
 @media (max-width: 600px) {
@@ -73,8 +108,12 @@ a:hover {
         font-size: 2rem;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
     section {
         margin: 10px;
-        padding: 15px;
+        padding: 20px;
     }
 }
