@@ -8,17 +8,19 @@
 </head>
 <body>
     <header>
-        <img src="https://uploaddeimagens.com.br/images/004/803/178/original/Imagem_do_WhatsApp_de_2024-06-19_as_10.33.43_702fa055.jpg?1719081531" 
-             alt="Infinite Symbol with Noble Nexus written inside it and Virtual Reality on top">
+        <div class="neon-border">
+            <img src="https://uploaddeimagens.com.br/images/004/803/178/original/Imagem_do_WhatsApp_de_2024-06-19_as_10.33.43_702fa055.jpg?1719081531" 
+                 alt="Infinite Symbol with Noble Nexus written inside it and Virtual Reality on top">
+        </div>
     </header>
     <main>
         <h1>NOBLE NEXUS</h1>
-        <section>
+        <section id="sobre-nos">
             <h2>Sobre nós</h2>
             <p>A Noble Nexus é uma empresa que foi fundada em 2024 por seus 2 donos, Miguel Spessatto e Gabriel Bagatini.
                 Queremos transformar a realidade virtual acessível para todas as pessoas, e contamos com sua ajuda para realizarmos isso.</p>
         </section>
-        <section>
+        <section id="nossa-missao">
             <h2>Nossa missão</h2>
             <p> Nossa principal missão é revolucionar a forma como as pessoas interagem com o mundo digital, criando experiências imersivas e acessíveis a todos. 
                 Visamos integrar a realidade virtual em diversos setores, como educação, saúde, entretenimento e negócios. 
@@ -26,7 +28,7 @@
                 qualidade de vida das pessoas, proporcionando novas formas de aprender, trabalhar e interagir entre si.
             </p>
         </section>
-        <section>
+        <section id="nossos-objetivos">
             <h2>Nossos Objetivos</h2>
             <p>Temos MUITOS objetivos em mente, aqui está uma lista de alguns deles.</p>
             <ul>
@@ -35,7 +37,7 @@
                 <li>Investimentos na área de tecnologia virtual</li>
             </ul>
         </section>
-        <section>
+        <section id="nosso-produto">
             <h2>Nosso Produto</h2>
             <p>Desenvolvemos óculos de Realidade Virtual de última geração que oferecem uma resolução ultra-alta, câmeras integradas para captura de movimento e áudio espacial.
                 Esses óculos são leves e confortáveis, permitindo longas sessões de uso sem desconforto. Todos nossos óculos e cápsulas de Realidade Virtual foram feitos com as
@@ -45,7 +47,6 @@
                 na hora de uma luta, você sinta tudo, como se fosse estar naquele lugar e momento. Basicamente, podemos dizer que sua realidade se transforma em outra. <br>
                 A empresa possui uma plataforma de conteúdo robusta, onde os usuários podem acessar uma biblioteca de experiências virtuais, desde jogos e filmes interativos 
                 até aulas de anatomia em 3D e visitas virtuais a lugares do mundo inteiro.
-
             </p>
         </section>
     </main>
@@ -58,5 +59,18 @@
                 <li>Nosso E-Mail: NobleNexus@noblenexus.com</li>
         </span>
     </footer>
+    <script>
+        const mainElement = document.querySelector('main');
+    
+        document.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+    
+            const centerX = window.innerWidth / 2;
+    
+            const rotateY = (centerX - mouseX) / centerX * 4; // Ajuste para rotação horizontal
+    
+            mainElement.style.transform = `rotateY(${rotateY}deg)`;
+        });
+    </script>  
 </body>
 </html>
