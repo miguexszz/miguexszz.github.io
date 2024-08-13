@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+    <div id="loading-container">
+        <div id="cube">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face left">3</div>
+            <div class="face right">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+        </div>
+        <p id="loading-text">Carregando Sistemas...</p>
+    </div>
     <header>
         <div class="neon-border">
             <img src="https://uploaddeimagens.com.br/images/004/803/178/original/Imagem_do_WhatsApp_de_2024-06-19_as_10.33.43_702fa055.jpg?1719081531" 
@@ -15,6 +26,7 @@
     </header>
     <main>
         <h1>NOBLE NEXUS</h1>
+        <!-- O restante do seu código HTML permanece inalterado -->
         <section id="sobre-nos">
             <h2>Sobre nós</h2>
             <p>A Noble Nexus é uma empresa que foi fundada em 2024 por seus 2 donos, Miguel Spessatto e Gabriel Bagatini.
@@ -60,15 +72,31 @@
         </span>
     </footer>
     <script>
+        // Loading animation and content reveal
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loadingContainer = document.getElementById('loading-container');
+                loadingContainer.classList.add('none');
+                
+                // Mostrar o conteúdo do site
+                document.querySelector('header').style.display = 'block';
+                document.querySelector('main').style.display = 'block';
+                document.querySelector('footer').style.display = 'block';
+
+                // Ocultar a tela de loading
+                loadingContainer.style.display = 'none';
+            }, 5000); // Duração da animação de 5 segundos
+        });
+
         const mainElement = document.querySelector('main');
-    
+
         document.addEventListener('mousemove', (event) => {
             const mouseX = event.clientX;
-    
+
             const centerX = window.innerWidth / 2;
-    
+
             const rotateY = (centerX - mouseX) / centerX * 4; // Ajuste para rotação horizontal
-    
+
             mainElement.style.transform = `rotateY(${rotateY}deg)`;
         });
     </script>  
